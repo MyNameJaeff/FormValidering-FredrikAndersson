@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Form Validering</title>
+</head>
+<body>
+    <section class="form1">
+        <form>
+            <label for="username" >Username<span style="color: red">*</span>: </label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password1" >Password<span style="color: red">*</span>: </label>
+            <input type="password" id="password1" name="password1" class="marginUp" required><br>
+            <label for="password2" >Repeat the password<span style="color: red">*</span>: </label>
+            <input type="password" id="password2" name="password2" class="marginUp" required><br>
+            <label for="email" >Email<span style="color: red">*</span>: </label>
+            <input type="email" id="email" name="email" class="marginUp" required><br>
+            <label for="agreement" >Agree to the TOS<span style="color: red">*</span>: </label>
+            <input type="checkbox" id="agreement" name="agreement" class="marginUp" required><br>
+            <input value="Submit" name="submitButton" class="submitButton marginUp" onclick="verifyForm()">
+        </form>
+    </section>
+    <section class="thankYou" id="thankYou">
+        <h1>Thank you for awnsering this form</h1>
+    </section>
+    <script src="./script/script.js"></script>
+</body>
+</html>

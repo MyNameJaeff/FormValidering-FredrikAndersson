@@ -1,0 +1,17 @@
+body{
+    background-color: azure;
+}
+.form1{
+    display: flex;
+    flex-direction: column;
+}
+.marginUp{
+    margin-top: 0.4%;
+}
+.submitButton{
+    width: 5%;
+    text-align: center;
+}
+.submitButton:hover{
+    cursor: pointer;
+}
