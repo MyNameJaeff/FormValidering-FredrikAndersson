@@ -8,10 +8,3 @@ body{
 .marginUp{
     margin-top: 0.4%;
 }
-.submitButton{
-    width: 5%;
-    text-align: center;
-}
-.submitButton:hover{
-    cursor: pointer;
-}

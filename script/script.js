@@ -1,24 +1,22 @@
-document.getElementById("thankYou").style.display="none"; //Tar bort tack medelandet genom att göra den osynlig
-
 function randomNumbers(){    //Skapar en array med 10 nummer mellan 1-100 som sedan skickas ut som alert
     let hundredRand = []
     for(let i = 0; i<10; i++){
         let tal = Math.floor(Math.random() * 101)
-        if(hundredRand.includes(tal)){ //Ifall tal redan finns i array så tar den nytt tal
-            let tal = Math.floor(Math.random() * 101)
+        if(!hundredRand.includes(tal)){ //Ifall tal inte finns i array så tar lägger den till ett tal i den
             hundredRand.push(tal)
         }
         else{
-            hundredRand.push(tal)
+            console.log("Duplicate: " + tal)
         }
     }
     alert("Unsorted: " + hundredRand)
     alert("Sorted: " + hundredRand.sort(function(a, b){return a-b})) //Sorterar talen från minst till störts
 }
-function verifyForm(){    //Kollar ifall allting är korrekt i första formuläret
+const verifyForm = () =>{    //Kollar ifall allting är korrekt i första formuläret
     let password1 = document.getElementById("password1").value
     let password2 = document.getElementById("password2").value
     let email = document.getElementById("email").value
+    let checkbox = document.getElementById("agreement")
     if(password1.length < 6){ //Ifall lösenordet är mindre än 6 bokstäver ger den error medelande
         alert("Your password has to be atleast 6 letters long")
     }
@@ -31,7 +29,12 @@ function verifyForm(){    //Kollar ifall allting är korrekt i första formulär
                 alert("That's not a correct email adress")
             }
             else{
-                document.getElementById("thankYou").style.display="flex"; //Visar tack medelandet
+                if(checkbox.checked){
+                    document.location.href = "./thanks.html"
+                }
+                else{
+                    alert("You have to check the box first")
+                }
             }
         }
     }
