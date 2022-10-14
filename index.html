@@ -9,33 +9,35 @@
 </head>
 <body>
     <section class="form1">
+        <h1>Javascript Form</h1>
         <form>
             <label for="username" >Username<span style="color: red">*</span>: </label>
-            <input type="text" id="username" name="username"><br>
+            <input type="text" id="username" placeholder="Username" name="username"><br>
             <label for="password1" >Password<span style="color: red">*</span>: </label>
-            <input type="password" id="password1" name="password1" class="marginUp"><br>
+            <input type="password" id="password1" placeholder="At least 6 characters" name="password1" class="marginUp"><br>
             <label for="password2" >Repeat the password<span style="color: red">*</span>: </label>
-            <input type="password" id="password2" name="password2" class="marginUp"><br>
+            <input type="password" id="password2" placeholder="Same as the fist password" name="password2" class="marginUp"><br>
             <label for="email" >Email<span style="color: red">*</span>: </label>
-            <input type="email" id="email" name="email" class="marginUp"><br>
+            <input type="email" id="email" name="email" placeholder="example@email.com" class="marginUp"><br>
             <label for="agreement" >Agree to the TOS<span style="color: red">*</span>: </label>
             <input type="checkbox" id="agreement" name="agreement" class="marginUp"><br>
-            <button name="submitButton" class="submitButton marginUp" onclick="verifyForm()">Submit</button>
+            <button type="button" name="submitButton" class="submitButton marginUp" onclick="verifyForm()">Submit</button>
         </form>
     </section>
-    <!-- <section class="form2">
-        <label for="username" >Username<span style="color: red">*</span>: </label>
-        <input type="text" id="username" name="username" required><br>
-        <label for="password1" >Password<span style="color: red">*</span>: </label>
-        <input type="password" id="password1" name="password1" class="marginUp" required><br>
-        <label for="password2" >Repeat the password<span style="color: red">*</span>: </label>
-        <input type="password" id="password2" name="password2" class="marginUp" required><br>
-        <label for="email" >Email<span style="color: red">*</span>: </label>
-        <input type="email" id="email" name="email" class="marginUp" required><br>
-        <label for="agreement" >Agree to the TOS<span style="color: red">*</span>: </label>
-        <input type="checkbox" id="agreement" name="agreement" class="marginUp" required><br>
-        <input type="submit" value="Send" name="submitButton" class="submitButton marginUp">
-    </section> -->
+    <section class="form2">
+        <h1>HTML Form</h1>
+        <form action="thanks.html">
+            <label for="username" >Username<span style="color: red">*</span>: </label>
+            <input type="text" name="username" placeholder="Username" required><br>
+            <label for="password1" >Password<span style="color: red">*</span>: </label>
+            <input type="password" name="password1" class="marginUp" placeholder="At least 6 characters" pattern=".{6,}" required><br>
+            <label for="email" >Email<span style="color: red">*</span>: </label>
+            <input type="email" name="email" class="marginUp" placeholder="example@email.com" required><br>
+            <label for="agreement" >Agree to the TOS<span style="color: red">*</span>: </label>
+            <input type="checkbox" name="agreement" class="marginUp" required><br>
+            <input type="submit" value="Submit" name="submitButton" class="submitButton marginUp">
+        </form>
+    </section>
     <script src="./script/script.js"></script>
 </body>
 </html>

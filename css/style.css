@@ -1,5 +1,6 @@
 body{
     background-color: azure;
+    display: flex;
 }
 .form1{
     display: flex;
@@ -7,4 +8,7 @@ body{
 }
 .marginUp{
     margin-top: 0.4%;
+}
+.form2{
+    margin-left: 10%;
 }
