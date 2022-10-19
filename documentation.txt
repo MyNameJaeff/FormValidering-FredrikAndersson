@@ -1,4 +1,33 @@
-Funktion1 randomNumber(){
+Egendefinierade funktioner:
+första funktionen randomNumber() skapar en tom array som ska ta in en sätt mängd randomiserade nummer mellan 1-100. 
+Efter arrayen har fått 10 nummer så skriver den ut dem i två listor varav en sorterad och en o-sorterad.
 
+andra funktionen är verifyForm() tar in datan som skrivs in i javascript formuläret och kollar deras värden.
+den kollar ifall det finns ett användarnamn, lösenord över 6 siffror, att lösenorden matchar, att emailen är strukturerad korrekt 
+och att checkboxen är icheckad.
 
-}
+tredje och sista funktionen är checkEmail() som är till för att användas innuti verifyForm(), den kollar så att emailen innehåller ett
+@ och att den inte ligger i början eller slutet av stringen.
+__________
+Kontroll/flödessatser:
+första är: while(hundredRand.length < 10) som är till för att konstant köra en if sats tills arrayen hundredRand.length är 10, vilket
+är när den har 10st randomisade nummer innuti sig. Jag använde den för att inte behöva använda i++ i slutet av en if funktion vilket 
+sparade mig en linje kod och vilket gjorde den mer kompakt.
+
+andra är: if(!hundredRand.includes(tal) som kollar ifall "tal" inte finns innuti arrayen hundredRand. Den är till för att ifall nummret 
+redan finns innuti arrayen så ska inte det talet pushas in. Jag använde denna för att det är enklare att kolla ifall det inte finns 
+än att det finns då man inte behöver en else sats alls. (Jag valde att ha en för att kolla vilka tal som blev dubbletter.)
+
+tredje: else{alert("That is not a correct username")} som är till för att skicka ett fel medelande ifall att användarnamnet inte har
+existerande text innuti sig själv. Jag använde denna för att det är det enklaste sätt jag kunde komma på att ge ut ett fel medelande.
+__________
+Fördefinierade objekt:
+Math.floor används för att runda av decimaltal nedåt, den används tillsammans med math.random då den annars kunde returnera decimaltal.
+Jag använde math.floor för att det är det bästa sätt att runda av decimaltal inom javascript.
+
+Math.random som är en funktion som get ett random tal mellan 0-1 inlcusive decimaltal som t.ex: 0.17 som kan höjas genom att gångra
+den med 100 vilket då blir nummret 17. Jag använde math.random för att det är det bästa sätt att få randomisade tal inom javascript kod, 
+då man annars skulle behöva göra en hel funktion för det.
+
+document.getElementById som används för att ta in värdet som existerar innuti en HTML fil genom elementets id. Jag använde den för att 
+det är det korrekta sätt man tar in data från ett html document. 

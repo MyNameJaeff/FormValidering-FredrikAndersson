@@ -1,10 +1,9 @@
 function randomNumbers(){//Skapar en array med 10 nummer mellan 1-100 som sedan skickas ut som alert
     let hundredRand = []
-    for(let i = 0; i<10;){
-        let tal = Math.floor(Math.random() * 101)//Slumpar fram ett tal mellan 1-100
+    while(hundredRand.length < 10){
+        let tal = Math.floor(Math.random() * 100) + 1//Slumpar fram ett tal mellan 1-100
         if(!hundredRand.includes(tal)){ //Ifall tal inte finns i array så tar lägger den till ett tal i den
             hundredRand.push(tal)
-            i++ //Ifall det läggs in ett tal i array så blir "i" en större för att det ska bli 10st tal
         }
         else{
             console.log("Duplicate: " + tal)//Skriver ut talet som blev en dubbel i consolen
@@ -55,4 +54,3 @@ function checkEmail(email){ //Returnerar false eller true
         return true;
     }
 }
-//randomNumbers()
