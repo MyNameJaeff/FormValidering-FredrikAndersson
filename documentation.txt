@@ -1,0 +1,4 @@
+Funktion1 randomNumber(){
+
+
+}

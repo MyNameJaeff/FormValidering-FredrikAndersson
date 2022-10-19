@@ -1,13 +1,13 @@
-function randomNumbers(){    //Skapar en array med 10 nummer mellan 1-100 som sedan skickas ut som alert
+function randomNumbers(){//Skapar en array med 10 nummer mellan 1-100 som sedan skickas ut som alert
     let hundredRand = []
     for(let i = 0; i<10;){
-        let tal = Math.floor(Math.random() * 101)
+        let tal = Math.floor(Math.random() * 101)//Slumpar fram ett tal mellan 1-100
         if(!hundredRand.includes(tal)){ //Ifall tal inte finns i array så tar lägger den till ett tal i den
             hundredRand.push(tal)
-            i++
+            i++ //Ifall det läggs in ett tal i array så blir "i" en större för att det ska bli 10st tal
         }
         else{
-            console.log("Duplicate: " + tal)
+            console.log("Duplicate: " + tal)//Skriver ut talet som blev en dubbel i consolen
         }
     }
     alert("Unsorted: " + hundredRand)
@@ -19,7 +19,7 @@ const verifyForm = () =>{    //Kollar ifall allting är korrekt i första formul
     let password2 = document.getElementById("password2").value
     let email = document.getElementById("email").value
     let checkbox = document.getElementById("agreement")
-    if(username.length > 0){
+    if(username.length > 0){ //Kollar så användarnamnet har någon text alls i sig
         if(password1.length < 6){ //Ifall lösenordet är mindre än 6 bokstäver ger den error medelande
             alert("Your password has to be atleast 6 letters long")
         }
@@ -32,7 +32,7 @@ const verifyForm = () =>{    //Kollar ifall allting är korrekt i första formul
                     alert("That's not a correct email adress")
                 }
                 else{
-                    if(checkbox.checked){
+                    if(checkbox.checked){//Kollar ifall checkboxen är icheckad
                         document.location.href = "./thanks.html" //Byter sida till thanks.html
                     }
                     else{
@@ -46,9 +46,9 @@ const verifyForm = () =>{    //Kollar ifall allting är korrekt i första formul
         alert("That is not a correct username")
     }
 }
-function checkEmail(email){ //Kollar ifall resultat blev false och ifall det finns ett @ i början eller slutet av emailen
-    let result = email.includes("@");//Returnerar false ifall emailen inte includerar ett @
-    if(result == false || (email[0] == "@" || email.slice(-1) == "@")){
+function checkEmail(email){ //Returnerar false eller true
+    let result = email.includes("@");//Returnerar false ifall email stringen inte includerar ett @
+    if(result == false || (email[0] == "@" || email.slice(-1) == "@")){//Kollar så att email includerar ett @ som inte är i början eller slutet
         return false;
     }
     else{
