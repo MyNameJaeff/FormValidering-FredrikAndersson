@@ -13,11 +13,11 @@ function randomNumbers(){//Skapar en array med 10 nummer mellan 1-100 som sedan 
     document.getElementById("sorted").innerText = hundredRand.sort((a, b) => a-b) //Sorterar talen från minst till störts
 }
 const verifyForm = () =>{    //Kollar ifall allting är korrekt i första formuläret
-    let username = document.getElementById("username").value
-    let password1 = document.getElementById("password1").value
-    let password2 = document.getElementById("password2").value
-    let email = document.getElementById("email").value
-    let checkbox = document.getElementById("agreement")
+    let username = document.forms["form1"]["username"].value
+    let password1 = document.forms["form1"]["password1"].value
+    let password2 = document.forms["form1"]["password2"].value
+    let email = document.forms["form1"]["email"].value
+    let checkbox = document.getElementById("agreement").checked
     if(username.length > 0){ //Kollar så användarnamnet har någon text alls i sig
         if(password1.length < 6){ //Ifall lösenordet är mindre än 6 bokstäver ger den error medelande
             alert("Your password has to be atleast 6 letters long")
@@ -31,7 +31,7 @@ const verifyForm = () =>{    //Kollar ifall allting är korrekt i första formul
                     alert("That's not a correct email adress")
                 }
                 else{
-                    if(checkbox.checked){//Kollar ifall checkboxen är icheckad
+                    if(checkbox == true){//Kollar ifall checkboxen är icheckad
                         document.location.href = "./thanks.html" //Byter sida till thanks.html
                     }
                     else{
