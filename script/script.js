@@ -10,7 +10,7 @@ function randomNumbers(){//Skapar en array med 10 nummer mellan 1-100 som sedan 
         }
     }
     alert("Unsorted: " + hundredRand)
-    alert("Sorted: " + hundredRand.sort(function(a, b){return a-b})) //Sorterar talen från minst till störts
+    alert("Sorted: " + hundredRand.sort((a, b) => a-b)) //Sorterar talen från minst till störts
 }
 const verifyForm = () =>{    //Kollar ifall allting är korrekt i första formuläret
     let username = document.getElementById("username").value
