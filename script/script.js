@@ -18,32 +18,24 @@ const verifyForm = () =>{    //Kollar ifall allting är korrekt i första formul
     let password2 = document.forms["form1"]["password2"].value
     let email = document.forms["form1"]["email"].value
     let checkbox = document.getElementById("agreement").checked
-    if(username.length > 0){ //Kollar så användarnamnet har någon text alls i sig
-        if(password1.length < 6){ //Ifall lösenordet är mindre än 6 bokstäver ger den error medelande
-            alert("Your password has to be atleast 6 letters long")
-        }
-        else{
-            if(password2 != password1){ //Ifall lösenorden inte är likadana så ger den error medelande
-                alert("Your passwords do not match")
-            }
-            else{
-                if(checkEmail(email) == false){ //Kör funktionen checkEmail
-                    alert("That's not a correct email adress")
-                }
-                else{
-                    if(checkbox == true){//Kollar ifall checkboxen är icheckad
-                        document.location.href = "./thanks.html" //Byter sida till thanks.html
-                    }
-                    else{
-                        alert("You have to check the box first")
-                    }                
-                }
-            }
-        }
-    }
-    else{
+    if(username == ""){ //Kollar så användarnamnet har någon text alls i sig
         alert("That is not a correct username")
     }
+    else if(password1.length < 6){ //Ifall lösenordet är mindre än 6 bokstäver ger den error medelande
+            alert("Your password has to be atleast 6 letters long")
+    }
+    else if(password2 != password1){//Ifall lösenorden inte är likadana så ger den error medelande
+        alert("Your passwords do not match")
+    }
+    else if(checkEmail(email) == false){ //Kör funktionen checkEmail
+        alert("That's not a correct email adress")
+    }
+    else if(checkbox == false){//Kollar ifall checkboxen är icheckad
+        alert("You have to check the box first")
+    }
+    else{
+        document.location.href = "./thanks.html" //Byter sida till thanks.html
+    }    
 }
 function checkEmail(email){ //Returnerar false eller true
     let result = email.includes("@");//Returnerar false ifall email stringen inte includerar ett @
