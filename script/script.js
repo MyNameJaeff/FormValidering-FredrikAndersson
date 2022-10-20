@@ -1,7 +1,7 @@
 function randomNumbers(){//Skapar en array med 10 nummer mellan 1-100 som sedan skickas ut som alert
     let hundredRand = []
     while(hundredRand.length < 10){
-        let tal = Math.floor(Math.random() * 100) + 1//Slumpar fram ett tal mellan 1-100
+        let tal = Math.ceil(Math.random() * 100)//Slumpar fram ett tal mellan 1-100
         if(!hundredRand.includes(tal)){ //Ifall tal inte finns i array så tar lägger den till ett tal i den
             hundredRand.push(tal)
         }
