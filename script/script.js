@@ -38,7 +38,7 @@ const verifyForm = () =>{    //Kollar ifall allting är korrekt i första formul
     }    
 }
 function checkEmail(email){ //Returnerar false eller true
-    let result = email.includes("@");//Returnerar false ifall email stringen inte includerar ett @
+    let result = email.includes("@") && email.includes(".");//Returnerar false ifall email stringen inte includerar ett @ eller en .
     if(result == false || (email[0] == "@" || email.slice(-1) == "@")){//Kollar så att email includerar ett @ som inte är i början eller slutet
         return false;
     }
