@@ -9,8 +9,8 @@ function randomNumbers(){//Skapar en array med 10 nummer mellan 1-100 som sedan 
             console.log("Duplicate: " + tal)//Skriver ut talet som blev en dubbel i consolen
         }
     }
-    alert("Unsorted: " + hundredRand)
-    alert("Sorted: " + hundredRand.sort((a, b) => a-b)) //Sorterar talen från minst till störts
+    document.getElementById("unSorted").innerText = hundredRand
+    document.getElementById("sorted").innerText = hundredRand.sort((a, b) => a-b) //Sorterar talen från minst till störts
 }
 const verifyForm = () =>{    //Kollar ifall allting är korrekt i första formuläret
     let username = document.getElementById("username").value
