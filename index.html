@@ -10,7 +10,7 @@
 <body>
     <section class="form1">
         <h1>Javascript Form</h1>
-        <form onsubmit="verifyForm(); return false;" id="form1" name="form1">
+        <form action="thanks.html" onsubmit="return verifyForm();" id="form1" name="form1">
             <label for="username">Username<span style="color: red">*</span>: </label>
             <input type="text" id="username" placeholder="Username" name="username"><br>
             <label for="password1" >Password<span style="color: red">*</span>: </label>
@@ -26,9 +26,9 @@
     </section>
     <section class="randomButton">
         <h2>Unsorted numbers:</h2>
-        <p id="unSorted"></p>
+        <p id="unSorted">-</p>
         <h2>Sorted numbers:</h2>
-        <p id="sorted"></p>
+        <p id="sorted">-</p>
         <button onclick="randomNumbers()">New numbers</button>
     </section>
     <section class="form2">
@@ -37,7 +37,7 @@
             <label for="username" >Username<span style="color: red">*</span>: </label>
             <input type="text" name="username" placeholder="Username" required><br>
             <label for="password1" >Password<span style="color: red">*</span>: </label>
-            <input type="password" name="password1" class="marginUp" placeholder="At least 6 characters" pattern=".{6,}" required><br>
+            <input type="password" name="password1" class="marginUp" placeholder="At least 6 characters" minlength="6" required><br>
             <label for="email" >Email<span style="color: red">*</span>: </label>
             <input type="email" name="email" class="marginUp" placeholder="example@email.com" required><br>
             <label for="agreement" >Agree to the TOS<span style="color: red">*</span>: </label>

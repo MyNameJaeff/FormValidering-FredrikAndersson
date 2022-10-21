@@ -20,21 +20,26 @@ const verifyForm = () =>{    //Kollar ifall allting är korrekt i första formul
     let checkbox = document.getElementById("agreement").checked
     if(username == ""){ //Kollar så användarnamnet har någon text alls i sig
         alert("That is not a correct username")
+        return false;
     }
     else if(password1.length < 6){ //Ifall lösenordet är mindre än 6 bokstäver ger den error medelande
-            alert("Your password has to be atleast 6 letters long")
+        alert("Your password has to be atleast 6 letters long")
+        return false;
     }
     else if(password2 != password1){//Ifall lösenorden inte är likadana så ger den error medelande
         alert("Your passwords do not match")
+        return false;
     }
     else if(checkEmail(email) == false){ //Kör funktionen checkEmail
         alert("That's not a correct email adress")
+        return false;
     }
     else if(checkbox == false){//Kollar ifall checkboxen är icheckad
         alert("You have to check the box first")
+        return false;
     }
     else{
-        document.location.href = "./thanks.html" //Byter sida till thanks.html
+        return true;
     }    
 }
 function checkEmail(email){ //Returnerar false eller true
